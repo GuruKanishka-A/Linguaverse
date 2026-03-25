@@ -1,0 +1,543 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Login Screen Styles */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.form-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+#login-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#register-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* Game Menu Styles */
+.menu-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.menu-options button {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#play-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#leaderboard-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+#logout-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Level Selection Styles */
+.level-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.level-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #699af0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.level-btn.selected {
+    background-color: #2196f3;
+    color: white;
+}
+
+#language-selector {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+#language-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#language-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#start-game-btn, #back-to-menu-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#start-game-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#back-to-menu-btn {
+    background-color: #873838;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-options select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.leaderboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#back-from-leaderboard {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #873838;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Game Screen Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #58cc02;
+    --secondary-color: #1cb0f6;
+    --error-color: #ff4b4b;
+    --text-color: #3c3c3c;
+    --background-color: #f7f7f7;
+    --white: #ffffff;
+    --border-radius: 12px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: rgb(51, 51, 154);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.hearts {
+    font-size: 1.5rem;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color:rgb(60, 60, 158);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Game Area Styles */
+.game-area {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+#question-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#instruction {
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+#question {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Options Styles */
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.option {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option.selected {
+    border-color: var(--secondary-color);
+    background-color: rgba(28, 176, 246, 0.1);
+}
+
+/* Word Bank Styles */
+#word-bank-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.word-piece {
+    background-color: #e6e6e6;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.word-piece:hover {
+    background-color: #4b6cbd;
+}
+
+.word-piece.used {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Answer Container Styles */
+#answer-container {
+    min-height: 60px;
+    border: 2px dashed #ccc;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.answer-word {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.answer-word:hover {
+    background-color: #0e9fe0;
+}
+
+/* Feedback Styles */
+#feedback-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+.feedback {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+#correct-feedback {
+    background-color: rgba(88, 204, 2, 0.1);
+    border: 1px solid var(--primary-color);
+}
+
+#incorrect-feedback {
+    background-color: rgba(255, 75, 75, 0.1);
+    border: 1px solid var(--error-color);
+}
+
+#continue-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 0 #45a501;
+}
+
+#continue-btn:hover {
+    background-color: #4fb802;
+}
+
+#continue-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #45a501;
+}
+
+/* Language Selector Styles */
+#language-selector {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#language-selector label {
+    margin-right: 10px;
+}
+
+#language-select {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #5956df;
+    font-size: 1rem;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-area {
+        padding: 20px;
+    }
+    
+    #question {
+        font-size: 1.5rem;
+    }
+    
+    #options-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #continue-btn {
+        padding: 12px 25px;
+    }
+}
+
+body {
+    background: url("../static/image.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Light overlay for visibility */
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e62;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu-container h1{
+    text-align: center;
+    color: #2c3e62;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="{{ url_for('index') }}" class="nav-link active">Dashboard</a>
+            <a href="{{ url_for('translator_page') }}" class="nav-link">Translator</a>
+            <a href="{{ url_for('game_page') }}" class="nav-link">Word Game</a>
+        </nav>
+        <h1>LINGUAVERSE</h1>
+        <h2>A Multilingual Translator</h2>
+        <div class="translator-box">
+            <div class="input-section">
+                <textarea id="input-text" placeholder="Enter text or upload a file"></textarea>
+                <div class="file-upload">
+                    <input type="file" id="file-input" accept=".txt,.doc,.docx">
+                    <label for="file-input">Upload File</label>
+                </div>
+                <select id="source-language">
+                    <option value="">Detect Language</option>
+                    <!-- Language options will be populated via JavaScript -->
+                </select>
+            </div>
+            <div class="target-languages">
+                <div class="target-language">
+                    <select class="target-lang-select">
+                        <!-- Language options will be populated via JavaScript -->
+                    </select>
+                    <textarea class="translated-text" readonly></textarea>
+                    <div class="controls">
+                        <button class="listen-btn">🔊 Listen</button>
+                        <button class="copy-btn">📋 Copy</button>
+                        <button class="translate-btn">🔄 Translate</button>
+                    </div>
+                </div>
+                <!-- Two more target language sections will be added via JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

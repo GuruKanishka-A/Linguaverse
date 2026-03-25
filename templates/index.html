@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaVerse - Language Learning Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="{{ url_for('index') }}" class="nav-link active">Dashboard</a>
+            <a href="{{ url_for('translator_page') }}" class="nav-link">Translator</a>
+            <a href="{{ url_for('game_page') }}" class="nav-link">Word Game</a>
+        </nav>
+        <div class="dashboard-container">
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-item">
+                    <h3>Translator</h3>
+                    <p>Translate text between multiple languages</p>
+                    <a href="{{ url_for('translator_page') }}" class="dashboard-btn">Go to Translator</a>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Word Game</h3>
+                    <p>Test your language skills and compete with others</p>
+                    <a href="{{ url_for('game_page') }}" class="dashboard-btn">Play Game</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
