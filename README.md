@@ -214,7 +214,7 @@ Subbalakshmi Lakshmipathy College of Science, Madurai
 
 ## 📄 License
 
-This project was developed as a Mini Project for B.Sc. Computer Science (Data Science & Analytics) under the guidance of **P. Indhuja, MCA., M.Phil., (Ph.D.,)** at Subbalakshmi Lakshmipathy College of Science, Madurai (2024–2025).
+This project was developed as a Mini Project for B.Sc. Computer Science (Data Science & Analytics) with M. Vishnuvarthini as a project partner at Subbalakshmi Lakshmipathy College of Science, Madurai (2024–2025).
 
 ---
 
